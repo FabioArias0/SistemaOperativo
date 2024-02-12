@@ -29,6 +29,7 @@ namespace SistemaOperativo
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantalladeInicio));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sTARTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,8 +41,12 @@ namespace SistemaOperativo
             this.turnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editarNombreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarCarpetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -80,7 +85,7 @@ namespace SistemaOperativo
             this.internetToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("internetToolStripMenuItem.Image")));
             this.internetToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.internetToolStripMenuItem.Name = "internetToolStripMenuItem";
-            this.internetToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.internetToolStripMenuItem.Size = new System.Drawing.Size(191, 38);
             this.internetToolStripMenuItem.Text = "Internet";
             this.internetToolStripMenuItem.Click += new System.EventHandler(this.internetToolStripMenuItem_Click);
             // 
@@ -90,7 +95,7 @@ namespace SistemaOperativo
             this.mediaPlayerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mediaPlayerToolStripMenuItem.Image")));
             this.mediaPlayerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mediaPlayerToolStripMenuItem.Name = "mediaPlayerToolStripMenuItem";
-            this.mediaPlayerToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.mediaPlayerToolStripMenuItem.Size = new System.Drawing.Size(191, 38);
             this.mediaPlayerToolStripMenuItem.Text = "Media Player";
             this.mediaPlayerToolStripMenuItem.Click += new System.EventHandler(this.mediaPlayerToolStripMenuItem_Click);
             // 
@@ -100,7 +105,7 @@ namespace SistemaOperativo
             this.notepadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("notepadToolStripMenuItem.Image")));
             this.notepadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.notepadToolStripMenuItem.Name = "notepadToolStripMenuItem";
-            this.notepadToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.notepadToolStripMenuItem.Size = new System.Drawing.Size(191, 38);
             this.notepadToolStripMenuItem.Text = "Notepad";
             this.notepadToolStripMenuItem.Click += new System.EventHandler(this.notepadToolStripMenuItem_Click);
             // 
@@ -110,7 +115,7 @@ namespace SistemaOperativo
             this.taskManagerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("taskManagerToolStripMenuItem.Image")));
             this.taskManagerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.taskManagerToolStripMenuItem.Name = "taskManagerToolStripMenuItem";
-            this.taskManagerToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.taskManagerToolStripMenuItem.Size = new System.Drawing.Size(191, 38);
             this.taskManagerToolStripMenuItem.Text = "Task Manager";
             this.taskManagerToolStripMenuItem.Click += new System.EventHandler(this.taskManagerToolStripMenuItem_Click);
             // 
@@ -120,7 +125,7 @@ namespace SistemaOperativo
             this.recyckeBinToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("recyckeBinToolStripMenuItem.Image")));
             this.recyckeBinToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.recyckeBinToolStripMenuItem.Name = "recyckeBinToolStripMenuItem";
-            this.recyckeBinToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.recyckeBinToolStripMenuItem.Size = new System.Drawing.Size(191, 38);
             this.recyckeBinToolStripMenuItem.Text = "Recycle Bin";
             this.recyckeBinToolStripMenuItem.Click += new System.EventHandler(this.recyckeBinToolStripMenuItem_Click);
             // 
@@ -130,13 +135,14 @@ namespace SistemaOperativo
             this.turnToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("turnToolStripMenuItem.Image")));
             this.turnToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.turnToolStripMenuItem.Name = "turnToolStripMenuItem";
-            this.turnToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.turnToolStripMenuItem.Size = new System.Drawing.Size(191, 38);
             this.turnToolStripMenuItem.Text = "Turn Off Computer";
             this.turnToolStripMenuItem.Click += new System.EventHandler(this.turnToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.ContextMenuStrip = this.contextMenuStrip1;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 113);
@@ -155,6 +161,26 @@ namespace SistemaOperativo
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Carpeta";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarNombreToolStripMenuItem,
+            this.eliminarCarpetaToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(162, 48);
+            // 
+            // editarNombreToolStripMenuItem
+            // 
+            this.editarNombreToolStripMenuItem.Name = "editarNombreToolStripMenuItem";
+            this.editarNombreToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.editarNombreToolStripMenuItem.Text = "Editar Nombre";
+            // 
+            // eliminarCarpetaToolStripMenuItem
+            // 
+            this.eliminarCarpetaToolStripMenuItem.Name = "eliminarCarpetaToolStripMenuItem";
+            this.eliminarCarpetaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.eliminarCarpetaToolStripMenuItem.Text = "Eliminar Carpeta";
             // 
             // PantalladeInicio
             // 
@@ -176,6 +202,7 @@ namespace SistemaOperativo
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,6 +219,9 @@ namespace SistemaOperativo
         private System.Windows.Forms.ToolStripMenuItem recyckeBinToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem editarNombreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarCarpetaToolStripMenuItem;
     }
 }
 
